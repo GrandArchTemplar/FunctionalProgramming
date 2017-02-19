@@ -1,4 +1,4 @@
-module HW1 where 
+module HW1 where
 --Pavel Gilyov
 --HomeTask 1
 --Task 1
@@ -42,7 +42,7 @@ isPrimeOld n = not $ any (\x -> (mod n x) == 0) $ list where
 isPrime :: Integer -> Bool
 isPrime 2 = True
 isPrime 3 = True
-isPrime n = not $ any (\x -> (mod n x) == 0) $ list where
+isPrime n = not $ any (\x -> (mod n x) == 0) $! list where
   list = 2:3:[5, 11.. bound + 1] ++ [7, 13.. bound + 1] where
     bound :: Integer
     bound = round . sqrt . fromIntegral $ n
@@ -58,7 +58,7 @@ isPrimeParametred n list = not $ any (\x -> (mod n x) == 0) $ list
 --Returns all primals from 2 to bound
 --Asymptotic: Θ(bound)
 primeList :: Integer -> [Integer]
-primeList bound = filter isPrime (list1 ++ list2) where
+primeList bound = filter isPrime list1 ++ filter isPrime list2 where
   list1 :: [Integer]
   list1 = takeWhile (<= bound) (2:3:[5, 11..])
   list2 :: [Integer]

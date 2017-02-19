@@ -15,16 +15,9 @@ build-type:          Simple
 -- extra-source-files:
 cabal-version:       >=1.10
 
-library
-  hs-source-dirs:      src
-  -- exposed-modules:
-  -- other-modules:
-  build-depends:       base >= 4 && < 5
-  ghc-options:         -Wall
-  default-language:    Haskell2010
 executable Homeworks
   main-is:             Main.hs
-  other-modules:       HW1
+  other-modules:       HW1 CW2
   -- other-extensions:
   build-depends:       base >=4.8 && <4.9
   hs-source-dirs:      src
