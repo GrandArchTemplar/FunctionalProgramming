@@ -16,9 +16,10 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 executable Homeworks
-  main-is:             Main.hs
-  other-modules:       HW1 CW2
-  -- other-extensions:
-  build-depends:       base >=4.8 && <4.9
-  hs-source-dirs:      src
-  default-language:    Haskell2010
+  main-is:           Main.hs
+  other-modules:     HW1 HW2 CW2 Utils
+  other-extensions:
+  build-depends:     base >=4.8 && <4.9 
+                   , regex-compat 
+  hs-source-dirs:    src
+  default-language:  Haskell2010
