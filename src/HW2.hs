@@ -90,7 +90,9 @@ maxDeriv (x:xs) = fst . maximumBy (\(_, a) -> \(_, b) -> compare a b) $ zip [0..
 maxNumber :: String -> Integer
 maxNumber = maximum . parserInt "[^0-9]"
 
+test11Func :: [Integer] -> [Integer]
 test11Func = increasing :: [Integer] -> [Integer]
+test11Data :: [([Integer], [Integer], String)]
 test11Data = [
                 ([1, 2, 3]            , [1, 2, 3]   , "Test 1.1.1"),
                 ([1]                  , [1]         , "Test 1.1.2"),
@@ -98,7 +100,9 @@ test11Data = [
                 ([3, 4, 5, 6, 1, 2, 3], [3, 4, 5, 6], "Test 1.1.4"),
                 ([1, 2, 3]            , [1, 2, 3]   , "Test 1.1.5")
              ]
+test12Func :: String -> Integer
 test12Func = sumNumbers
+test12Data :: [(String, Integer, String)]
 test12Data = [
                 ("100"            , 100            , "Test 1.2.1"),
                 ("222222222222222", 222222222222222, "Test 1.2.2"),
@@ -106,7 +110,9 @@ test12Data = [
                 ("222-222 333"    , 777            , "Test 1.2.4"),
                 ("222-222 222+222", 888            , "Test 1.2.5")
              ]
-test21Func = segmEquals :: [Integer] -> [Integer]
+test21Func :: [Integer] -> [Integer]
+test21Func = segmEquals
+test21Data :: [([Integer], [Integer], String)]
 test21Data = [
                 ([1]         , [1]   , "Test 2.1.1"),
                 ([1, 2]      , [2]   , "Test 2.1.2"),
@@ -114,6 +120,7 @@ test21Data = [
                 ([1, 2, 2, 3], [2, 2], "Test 2.1.4"),
                 ([1, 0, 0, 2], [0, 0], "Test 2.1.5")
              ]
+test22Func :: String -> Int
 test22Func = amountOfNumbers
 test22Data :: [(String, Int, String)]
 test22Data = [
@@ -123,7 +130,9 @@ test22Data = [
                ("100-100"      , 0, "Test 2.2.4"), 
                ("a100"         , 1, "Test 2.2.5")
              ] 
-test31Func = maxProd     
+test31Func :: [Integer] -> [Integer]
+test31Func = maxProd 
+test31Data :: [([Integer], [Integer], String)]    
 test31Data = [
                 ([1000, 1000, 1000]           , [1000, 1000, 1000]  , "Test 3.1.1"),
                 ([1000, 1000, 1000, 1]        , [1000, 1000, 1000]  , "Test 3.1.2"),
@@ -131,6 +140,7 @@ test31Data = [
                 ([1000, 1000, 1000, -4000, 1] , [1000, 1000, 1000]  , "Test 3.1.4"),
                 ([1000, -1000, -1000, 1, 1, 1], [1000, -1000, -1000], "Test 3.1.5")
              ]
+test32Func :: String -> Int
 test32Func = signs
 test32Data :: [(String, Int, String)]
 test32Data = [
@@ -140,6 +150,7 @@ test32Data = [
                 ("a:;,!?.abc"            , 6, "Test 3.2.4"),
                 (".......dsa...da?..?...", 9, "Test 3.2.5")
              ] 
+test41Func :: [Integer] -> Int
 test41Func = maxDeriv
 test41Data :: [([Integer], Int, String)]
 test41Data = [
@@ -149,6 +160,7 @@ test41Data = [
                 ([2,2,2]      , 2, "Test 4.1.4"),
                 ([3,1,2,5,7,6], 2, "Test 4.1.5")
              ]
+test42Func :: String -> Integer
 test42Func = maxNumber
 test42Data :: [(String, Integer, String)]
 test42Data = [
