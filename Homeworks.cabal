@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 
 executable Homeworks
   main-is:           Main.hs
-  other-modules:     HW1 HW2 CW2 Utils
+  other-modules:     HW1 HW2 HW3 HW6 CW2 CW4 CW5 Utils
   other-extensions:
   build-depends:     base >=4.8 && <4.9 
                    , regex-compat 
